@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="gaojl">
 <meta property="og:description" content="vue.js-组件化应用构建 允许我们使用小型、独立、通常可复用的组件构建大型应用 本文参考于这篇文章  在vue里，组件是一个拥有预定义选项的vue实例   123456789101112131415161718192021Vue.component(&apos;todo-item&apos;,&amp;#123;    //props意思是该组件接受一个自定义属性todo    props:[todo]    templ">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-04-08T09:01:39.726Z">
+<meta property="og:updated_time" content="2018-04-08T09:05:50.424Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="gaojl">
 <meta name="twitter:description" content="vue.js-组件化应用构建 允许我们使用小型、独立、通常可复用的组件构建大型应用 本文参考于这篇文章  在vue里，组件是一个拥有预定义选项的vue实例   123456789101112131415161718192021Vue.component(&apos;todo-item&apos;,&amp;#123;    //props意思是该组件接受一个自定义属性todo    props:[todo]    templ">
@@ -164,7 +164,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="vue-js-组件化应用构建"><a href="#vue-js-组件化应用构建" class="headerlink" title="vue.js-组件化应用构建"></a>vue.js-组件化应用构建</h1><blockquote>
-<p>允许我们使用小型、独立、通常可复用的组件构建大型应用 本文参考于<a href="(https://cn.vuejs.org/v2/guide/index.html)">这篇文章</a></p>
+<p>允许我们使用小型、独立、通常可复用的组件构建大型应用 本文参考于<a href="https://cn.vuejs.org/v2/guide/index.html" target="_blank" rel="noopener">这篇文章</a></p>
 </blockquote>
 <p>在vue里，组件是一个拥有预定义选项的vue实例</p>
 <blockquote>
@@ -181,7 +181,7 @@
 <p>当创建实例的时候，data中存在的属性才是响应式的，即数据改变会使得重新渲染视图。</p>
 </blockquote>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">"app"</span>&gt;</span><br><span class="line">    &lt;p&gt;&#123;&#123;a&#125;&#125;&lt;<span class="regexp">/p&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>div&gt;</span><br><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">    <span class="keyword">var</span> data =&#123;</span><br><span class="line">        a:<span class="number">1</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">        el:<span class="string">"#app"</span>,</span><br><span class="line">        data: data</span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="built_in">console</span>.log(data.a == vm.a)</span><br><span class="line">    <span class="built_in">console</span>.log(vm.$el == <span class="built_in">document</span>.getElementById(<span class="string">"app"</span>))</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
-<p>生命周期<br>这是<a href="(https://upload-images.jianshu.io/upload_images/1627906-19fafa634c837a20.png?imageMogr2/auto-orient/)">生命周期图</a></p>
+<p>生命周期<br>这是<a href="https://upload-images.jianshu.io/upload_images/1627906-19fafa634c837a20.png?imageMogr2/auto-orient/" target="_blank" rel="noopener">生命周期图</a></p>
 
       
 
