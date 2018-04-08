@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2018 | gaojl</title>
+  <title>gaojl</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="vue.js-组件化应用构建 允许我们使用小型、独立、通常可复用的组件构建大型应用 本文参考于这篇文章  在vue里，组件是一个拥有预定义选项的vue实例   123456789101112131415161718192021Vue.component(&apos;todo-item&apos;,&amp;#123;    //props意思是该组件接受一个自定义属性todo    props:[todo]    templ">
+<meta property="og:type" content="article">
 <meta property="og:title" content="gaojl">
-<meta property="og:url" content="http://yoursite.com/archives/2018/index.html">
+<meta property="og:url" content="http://yoursite.com/2018/04/08/vue-js-组件系统/index.html">
 <meta property="og:site_name" content="gaojl">
+<meta property="og:description" content="vue.js-组件化应用构建 允许我们使用小型、独立、通常可复用的组件构建大型应用 本文参考于这篇文章  在vue里，组件是一个拥有预定义选项的vue实例   123456789101112131415161718192021Vue.component(&apos;todo-item&apos;,&amp;#123;    //props意思是该组件接受一个自定义属性todo    props:[todo]    templ">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-04-08T09:01:39.726Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="gaojl">
+<meta name="twitter:description" content="vue.js-组件化应用构建 允许我们使用小型、独立、通常可复用的组件构建大型应用 本文参考于这篇文章  在vue里，组件是一个拥有预定义选项的vue实例   123456789101112131415161718192021Vue.component(&apos;todo-item&apos;,&amp;#123;    //props意思是该组件接受一个自定义属性todo    props:[todo]    templ">
   
     <link rel="alternative" href="/atom.xml" title="gaojl" type="application/atom+xml">
   
@@ -154,151 +158,177 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-vue-js-组件系统" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="vue-js-组件化应用构建"><a href="#vue-js-组件化应用构建" class="headerlink" title="vue.js-组件化应用构建"></a>vue.js-组件化应用构建</h1><blockquote>
+<p>允许我们使用小型、独立、通常可复用的组件构建大型应用 本文参考于<a href="(https://cn.vuejs.org/v2/guide/index.html)">这篇文章</a></p>
+</blockquote>
+<p>在vue里，组件是一个拥有预定义选项的vue实例</p>
+<blockquote>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">Vue.component(<span class="string">'todo-item'</span>,&#123;</span><br><span class="line">    <span class="comment">//props意思是该组件接受一个自定义属性todo</span></span><br><span class="line">    props:[todo]</span><br><span class="line">    template:<span class="string">'&lt;li&gt;这是一个待办事项&lt;li&gt;'</span></span><br><span class="line">    &#125;)</span><br><span class="line"><span class="keyword">var</span> app = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">    el:<span class="string">'#app'</span>,</span><br><span class="line">    data:&#123;</span><br><span class="line">        groups:[</span><br><span class="line">            &#123;</span><br><span class="line">                id:<span class="number">1</span>,<span class="attr">text</span>:<span class="string">"group1"</span></span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                id:<span class="number">2</span>,<span class="attr">text</span>:<span class="string">"group1"</span></span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                id:<span class="number">3</span>,<span class="attr">text</span>:<span class="string">"group1"</span></span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;</span><br><span class="line">    &#125;)</span><br></pre></td></tr></table></figure>
+<p>现在你可以使用该模块来构建另一个组件模块</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ol</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="name">todo-item</span> <span class="attr">v-for:</span>'<span class="attr">item</span> <span class="attr">in</span> <span class="attr">groups</span>' <span class="attr">v-bind:todo</span>=<span class="string">"item"</span>  <span class="attr">v-bind:key</span>=<span class="string">"item.id"</span>&gt;</span><span class="tag">&lt;/<span class="name">todo-item</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ol</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>从上面的例子中可以看到，子单元与父单元通过props 接口 进行良好的解耦</p>
+</blockquote>
+<p>一个vue应用由一个通过new Vue 创建的根实例，以及可选的嵌套的、可复用的组件树组成。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">根实例</span><br><span class="line">  |__  Todolist</span><br><span class="line">         |__TodoItem</span><br><span class="line">         |      |__DeleteTodoButton</span><br><span class="line">         |      |__EditTodoButton</span><br><span class="line">         |__ TodoListFooter</span><br><span class="line">                |__ClearTodosButton</span><br><span class="line">                |__TodoListStatistics</span><br></pre></td></tr></table></figure></p>
+<p>数据与方法</p>
+<blockquote>
+<p>当创建实例的时候，data中存在的属性才是响应式的，即数据改变会使得重新渲染视图。</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">"app"</span>&gt;</span><br><span class="line">    &lt;p&gt;&#123;&#123;a&#125;&#125;&lt;<span class="regexp">/p&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>div&gt;</span><br><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">    <span class="keyword">var</span> data =&#123;</span><br><span class="line">        a:<span class="number">1</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">        el:<span class="string">"#app"</span>,</span><br><span class="line">        data: data</span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="built_in">console</span>.log(data.a == vm.a)</span><br><span class="line">    <span class="built_in">console</span>.log(vm.$el == <span class="built_in">document</span>.getElementById(<span class="string">"app"</span>))</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+<p>生命周期<br>这是<a href="(https://upload-images.jianshu.io/upload_images/1627906-19fafa634c837a20.png?imageMogr2/auto-orient/)">生命周期图</a></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/04/08/vue-js-组件系统/" class="archive-article-date">
-  	<time datetime="2018-04-08T07:49:05.976Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-08</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/04/08/vue-js-组件系统/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/04/06/markdown语法简介/" class="archive-article-date">
-  	<time datetime="2018-04-06T04:54:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-06</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/04/06/markdown语法简介/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">markdown语法简介</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/06/markdown语法简介/">markdown语法简介</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/03/18/deleteNmae/" class="archive-article-date">
-  	<time datetime="2018-03-18T15:35:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-18</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/18/deleteNmae/">deleteNmae</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/03/18/my-first/" class="archive-article-date">
-  	<time datetime="2018-03-18T14:48:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-18</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/18/my-first/">my_first</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
+  
+  
+  
+  <div id="gitment-ctn"></div>
+  <link rel="stylesheet" href="https://dn-coding-net-public-file.qbox.me/Coding-Comments/v0.0.3/default.css">
+  <script src="https://dn-coding-net-public-file.qbox.me/Coding-Comments/v0.0.3/gitment.min.js"></script>
+  <script>
+  var gitment = new Gitment({
+      owner: "gaojl",
+      repo: "hexo-comments",
+      oauth: {
+          client_id: "c2defbf6f0460da007e604da023c9881",
+          client_secret: "2aa3feaeae5cdccede53368a6994dd1af465e692",
+      },
+  });
+  gitment.render('gitment-ctn')
+  </script>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/03/18/hello-world/" class="archive-article-date">
-  	<time datetime="2018-03-18T14:46:40.730Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-18</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/18/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -321,8 +351,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
