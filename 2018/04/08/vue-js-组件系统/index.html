@@ -6,18 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>gaojl</title>
+  <title>markdown语法简介 | gaojl</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="vue.js-组件化应用构建 允许我们使用小型、独立、通常可复用的组件构建大型应用 本文参考于这篇文章  在vue里，组件是一个拥有预定义选项的vue实例   123456789101112131415161718192021Vue.component(&apos;todo-item&apos;,&amp;#123;    //props意思是该组件接受一个自定义属性todo    props:[todo]    templ">
 <meta property="og:type" content="article">
-<meta property="og:title" content="gaojl">
+<meta property="og:title" content="markdown语法简介">
 <meta property="og:url" content="http://yoursite.com/2018/04/08/vue-js-组件系统/index.html">
 <meta property="og:site_name" content="gaojl">
 <meta property="og:description" content="vue.js-组件化应用构建 允许我们使用小型、独立、通常可复用的组件构建大型应用 本文参考于这篇文章  在vue里，组件是一个拥有预定义选项的vue实例   123456789101112131415161718192021Vue.component(&apos;todo-item&apos;,&amp;#123;    //props意思是该组件接受一个自定义属性todo    props:[todo]    templ">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-04-08T09:05:50.424Z">
+<meta property="og:updated_time" content="2018-04-09T00:58:01.694Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="gaojl">
+<meta name="twitter:title" content="markdown语法简介">
 <meta name="twitter:description" content="vue.js-组件化应用构建 允许我们使用小型、独立、通常可复用的组件构建大型应用 本文参考于这篇文章  在vue里，组件是一个拥有预定义选项的vue实例   123456789101112131415161718192021Vue.component(&apos;todo-item&apos;,&amp;#123;    //props意思是该组件接受一个自定义属性todo    props:[todo]    templ">
   
     <link rel="alternative" href="/atom.xml" title="gaojl" type="application/atom+xml">
@@ -161,6 +161,21 @@
             <article id="post-vue-js-组件系统" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      markdown语法简介
+    </h1>
+  
+
+        
+        <a href="/2018/04/08/vue-js-组件系统/" class="archive-article-date">
+  	<time datetime="2018-04-08T04:54:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-08</time>
+</a>
+        
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="vue-js-组件化应用构建"><a href="#vue-js-组件化应用构建" class="headerlink" title="vue.js-组件化应用构建"></a>vue.js-组件化应用构建</h1><blockquote>
@@ -181,7 +196,28 @@
 <p>当创建实例的时候，data中存在的属性才是响应式的，即数据改变会使得重新渲染视图。</p>
 </blockquote>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">"app"</span>&gt;</span><br><span class="line">    &lt;p&gt;&#123;&#123;a&#125;&#125;&lt;<span class="regexp">/p&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>div&gt;</span><br><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">    <span class="keyword">var</span> data =&#123;</span><br><span class="line">        a:<span class="number">1</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">        el:<span class="string">"#app"</span>,</span><br><span class="line">        data: data</span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="built_in">console</span>.log(data.a == vm.a)</span><br><span class="line">    <span class="built_in">console</span>.log(vm.$el == <span class="built_in">document</span>.getElementById(<span class="string">"app"</span>))</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
-<p>生命周期<br>这是<a href="https://upload-images.jianshu.io/upload_images/1627906-19fafa634c837a20.png?imageMogr2/auto-orient/" target="_blank" rel="noopener">生命周期图</a></p>
+<p>生命周期<br>这是<a href="https://upload-images.jianshu.io/upload_images/1627906-19fafa634c837a20.png?imageMogr2/auto-orient/" target="_blank" rel="noopener">生命周期图</a><br>每个vue实例在初始化的过程中都需要设置数据监听、编译模板、将实例挂载到DOM并在数据变化时候更新DOM</p>
+<p>模板语法<br>Vue.js 使用了基于HTML的模板语法，允许开发者声明式的将DOM绑定至底层Vue实例的数据，所有Vue.js的模板都是合法的HTML，所以还能被遵循规范的浏览器和HTML解析器解析</p>
+<ul>
+<li><p>文本<br>  使用大括号语法文本插值</p>
+  <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//大括号语法将会被替换为对应数据对象上的message属性的值。无论何时绑定的数据对象上的message属性发生了变化插值处内容都会更新</span><br><span class="line"><span class="tag">&lt;<span class="name">span</span>&gt;</span>&#123;&#123;message&#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>原始html<br>  双大括号会把数据解释为普通文本，为了能够输出真正的html,需要使用v-html指令,这时span中的内容将会被替换为属性值rawhtml.作为html解析。</p>
+  <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> &gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">v-html</span>=<span class="string">"rawHtml"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用javascript 表达式</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;number+<span class="number">1</span>&#125;&#125;</span><br><span class="line">&#123;&#123;ok?<span class="string">'YES'</span>:<span class="string">'NO'</span>&#125;&#125;</span><br><span class="line">&#123;&#123;message.split(<span class="string">''</span>).reverse().join(<span class="string">''</span>)&#125;&#125;</span><br><span class="line">&lt;div v-bind:id=<span class="string">"'list-'+id"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="comment">//这些表达式会在所属vue实例的数据作用域下作为js解析，有个限制就是，每个绑定只能包含单个表达式，语句不会</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>指令</p>
+<blockquote>
+<p>指令是指带有v-前缀的属性，指令的值预期是个单个的js表达式。指令的职责是：当表达式的值改变时，将产生连带的影响，响应式的作用于DOM.</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//这里v-if 的指令将根据seen值来插入、或者不插入p元素</span><br><span class="line">&lt;p v-if=&quot;seen &quot;&gt;now you see me&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>带参数<br>    一些指令能够接受一个参数，在指令名称之后以冒号表示。例如v-bind指令可以响应式的更新html中的属性值<br>    <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//这里 href属性与表达式url绑定</span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">v-bind:href</span>=<span class="string">"url"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">//v-on 可用于监听DOM事件 参数是事件名</span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">v-on:click</span>=<span class="string">"dosomething"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
 
       
 
